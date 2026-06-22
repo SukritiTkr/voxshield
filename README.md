@@ -1,6 +1,6 @@
 # VoxShield
 
-**An Accessible, AI-Assisted Browser Defense Against Phishing, Fake CAPTCHAs & Clipboard-Hijacking Scams for Visually Impaired Users**
+**An Accessible, AI Assisted Browser Defense Against Phishing, Fake CAPTCHAs & Clipboard Hijacking Scams for Visually Impaired Users**
 
 Bharat Academix CodeQuest 2026 - Round 2 Prototype Submission
 Team: Sukriti Thakur

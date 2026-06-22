@@ -7,6 +7,8 @@ Team: Sukriti Thakur
 
 ---
 
+## Demo Video showcasing the key features and functionality - https://youtu.be/GFmzgeQlblQ
+
 ## 1. Problem Statement
 
 India has an estimated 4.95 crore (49.5 million) visually impaired individuals who navigate the web using screen readers such as NVDA and JAWS. Cybersecurity tooling almost universally assumes a sighted user who can visually spot a fake padlock icon, a misspelled domain or an off looking CAPTCHA box. None of these visual cues exist for a screen reader user.

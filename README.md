@@ -2,16 +2,16 @@
 
 **An Accessible, AI-Assisted Browser Defense Against Phishing, Fake CAPTCHAs & Clipboard-Hijacking Scams for Visually Impaired Users**
 
-Bharat Academix CodeQuest 2026 — Round 2 Prototype Submission
+Bharat Academix CodeQuest 2026 - Round 2 Prototype Submission
 Team: Sukriti Thakur
 
 ---
 
 ## 1. Problem Statement
 
-India has an estimated 4.95 crore (49.5 million) visually impaired individuals who navigate the web using screen readers such as NVDA and JAWS. Cybersecurity tooling almost universally assumes a sighted user who can visually spot a fake padlock icon, a misspelled domain, or an off-looking CAPTCHA box. None of these visual cues exist for a screen reader user.
+India has an estimated 4.95 crore (49.5 million) visually impaired individuals who navigate the web using screen readers such as NVDA and JAWS. Cybersecurity tooling almost universally assumes a sighted user who can visually spot a fake padlock icon, a misspelled domain or an off looking CAPTCHA box. None of these visual cues exist for a screen reader user.
 
-Fake CAPTCHA clipboard-hijacking scams have escalated sharply through 2025–2026. The attack pattern:
+Fake CAPTCHA clipboard hijacking scams have escalated sharply through 2025–2026. The attack pattern:
 
 1. A fraudulent "verification" overlay appears, mimicking a real CAPTCHA.
 2. The victim is instructed to press **Windows + R** (opening the Run dialog) and paste clipboard contents.
@@ -63,26 +63,26 @@ No backend, no external API calls, no build step — plain JS/HTML/JSON, runnabl
 ## 5. System Architecture
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│                      Web Page (any site)                  │
-│                                                             │
+┌──────────────────────────────────────────────────────────┐
+│                      Web Page (any site)                 │
+│                                                          │
 │   ┌──────────────┐   ┌──────────────┐   ┌──────────────┐ │
 │   │ DOM Scanner  │   │  Clipboard   │   │  Link Audit  │ │
 │   │ (fake CAPTCHA│   │   Monitor    │   │  (href vs.   │ │
 │   │  detection)  │   │ (hijack det.)│   │ anchor text) │ │
 │   └──────┬───────┘   └──────┬───────┘   └──────┬───────┘ │
-│          │                  │                   │         │
-│          └──────────────────┼───────────────────┘         │
-│                             ▼                              │
-│                   content.js (orchestrator)                │
-│                             │                               │
-│                             ▼                               │
-│                    voice.js (priority queue)                │
-│                    ┌────────┴────────┐                      │
-│                    ▼                 ▼                      │
-│            aria-live region   speechSynthesis                │
-│            (screen readers)   (audio fallback)                │
-└─────────────────────────────────────────────────────────┘
+│          │                  │                   │        │
+│          └──────────────────┼───────────────────┘        │
+│                             ▼                            │
+│                   content.js (orchestrator)              │
+│                             │                            │
+│                             ▼                            │
+│                    voice.js (priority queue)             │
+│                    ┌────────┴────────┐                   │
+│                    ▼                 ▼                   │
+│            aria-live region   speechSynthesis            │
+│            (screen readers)   (audio fallback)           │
+└──────────────────────────────────────────────────────────┘
                              │
                              ▼
                     background.js (service worker)

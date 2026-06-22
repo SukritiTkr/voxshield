@@ -24,14 +24,14 @@ For a screen reader user, the screen reader simply reads attacker-written instru
 
 VoxShield is a lightweight Chrome browser extension that adds an **audio-first security layer** on top of any webpage. It runs three independent, client-side detectors and announces findings audibly and immediately — both via screen-reader-compatible ARIA live regions and via browser speech synthesis as a fallback.
 
-### Detector 1 — Fake CAPTCHA Detection
+### Detector 1 - Fake CAPTCHA Detection
 Distinguishes genuine CAPTCHA embeds (sandboxed `<iframe>` served from a verified provider domain — Google/reCAPTCHA, hCaptcha, Cloudflare Turnstile) from fake, plain-HTML "verification" blocks. Cross-references nearby text for known scam phrasing (e.g. Run-dialog / paste instructions).
 
-### Detector 2 — Clipboard Hijack Monitor
-Monkey-patches `document.execCommand('copy')` and `navigator.clipboard.writeText` to detect unsolicited, script-triggered clipboard writes — the near-universal fingerprint of this scam family — and announces a warning the instant it happens, before the user has a chance to paste anything.
+### Detector 2 - Clipboard Hijack Monitor
+Monkey-patches `document.execCommand('copy')` and `navigator.clipboard.writeText` to detect unsolicited, script triggered clipboard writes; the near-universal fingerprint of this scam family and announces a warning the instant it happens, before the user has a chance to paste anything.
 
-### Detector 3 — Hyperlink Destination Audit
-For every link on the page, compares the visible anchor text against the actual `href` destination. If a link's text implies one domain but the real destination is different, VoxShield announces the mismatch before the user activates the link — the audio equivalent of a sighted user checking the browser's status-bar URL preview.
+### Detector 3 - Hyperlink Destination Audit
+For every link on the page, compares the visible anchor text against the actual `href` destination. If a link's text implies one domain but the real destination is different, VoxShield announces the mismatch before the user activates the link; the audio equivalent of a sighted user checking the browser's status bar URL preview.
 
 ### Voice Layer
 Every finding is announced through two parallel channels:

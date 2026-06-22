@@ -124,11 +124,11 @@ This prototype implements working, testable versions of all three core detectors
 
 **Planned next steps (post-MVP roadmap):**
 - Optional cloud-assisted classification layer (e.g. an LLM call to assess ambiguous, borderline pages) for cases the heuristics are unsure about, while keeping the default fast path fully local.
-- Expand the trusted-CAPTCHA-provider list and scam-phrase corpus based on real-world telemetry (opt-in, anonymized).
+- Expand the trusted-CAPTCHA-provider list and scam phrase corpus based on real world telemetry (opt-in, anonymized).
 - NVDA/JAWS-specific QA pass with real assistive-technology users.
 - Chrome Web Store packaging and listing.
 - Firefox/Edge portability (the detection logic is vanilla JS and largely portable; only the manifest and a few Chrome-specific APIs would need adaptation).
 
 ## 9. Impact
 
-Targets a population — screen reader users — that is simultaneously highly exposed to this scam family (no visual cues to rely on) and almost entirely unserved by existing security tooling, which is built visual-first. The approach is inexpensive to run (no server costs), preserves user privacy (no data leaves the browser), and is portable to any Chromium-based browser.
+Targets a population, screen reader users, that is simultaneously highly exposed to this scam family (no visual cues to rely on) and almost entirely unserved by existing security tooling, which is built visual-first. The approach is inexpensive to run (no server costs), preserves user privacy (no data leaves the browser) and is portable to any Chromium-based browser.

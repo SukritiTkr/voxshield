@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>VoxShield</title>
+<style>
+  body {
+    width: 320px;
+    font-family: -apple-system, Segoe UI, Roboto, sans-serif;
+    margin: 0;
+    padding: 16px;
+    background: #0f172a;
+    color: #f1f5f9;
+  }
+  h1 {
+    font-size: 16px;
+    margin: 0 0 4px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .status {
+    font-size: 12px;
+    color: #4ade80;
+    margin-bottom: 12px;
+  }
+  .status::before {
+    content: "● ";
+  }
+  h2 {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #94a3b8;
+    margin: 16px 0 8px 0;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 220px;
+    overflow-y: auto;
+  }
+  li {
+    background: #1e293b;
+    border-left: 3px solid #ef4444;
+    border-radius: 4px;
+    padding: 8px 10px;
+    margin-bottom: 6px;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  li.warning { border-left-color: #f59e0b; }
+  .empty {
+    font-size: 12px;
+    color: #64748b;
+    font-style: italic;
+  }
+  .footer {
+    margin-top: 14px;
+    font-size: 10px;
+    color: #64748b;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <h1>🛡️ VoxShield</h1>
+  <div class="status">Protection active</div>
+
+  <h2>Recent threats announced</h2>
+  <ul id="log"></ul>
+  <div class="empty" id="empty-msg">No threats detected yet. Browse normally — VoxShield is listening.</div>
+
+  <div class="footer">Audio-first defense for screen reader users</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
